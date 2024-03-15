@@ -1,0 +1,87 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+
+  <div class="row mt-5">
+    <div class="col-8 offset-2">
+      <h3>Add your brand</h3>
+      <form
+        action="/listings"
+        method="post"
+        novalidate
+        class="needs-validation"
+      >
+        <div class="mb-3">
+          <label for="Brand" class="form-label">Brand Name</label>
+          <input
+            type="text"
+            name="listing[Brand]"
+            placeholder="Add a catchy title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title looks good!</div>
+        </div>
+        <div class="mb-3">
+          <label for="Brief" class="form-label">Brand brief</label>
+          <textarea
+            name="listing[Brief]"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter a short brief</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Image Link</label>
+          <input
+            type="text"
+            name="listing[image]"
+            placeholder="enter image URL/Link"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="video" class="form-label">Video</label>
+          <input
+            type="text"
+            name="listing[video]"
+            placeholder="enter image URL/Link"
+            class="form-control"
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="target" class="form-label">Target</label>
+            <input
+              type="text"
+              name="listing[target]"
+              placeholder="Global"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Enter valid target type for Customers</div>
+          </div>
+          <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input
+              type="text"
+              name="listing[location]"
+              placeholder="Jaipur,Rajasthan"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Location should be valid</div>
+          </div>
+          
+        </div>
+
+        
+
+        <br /><br />
+        <button class="btn btn-dark add-btn">Add</button> <br />
+      </form>
+      <br /><br />
+    </div>
+  </div>
+</body>

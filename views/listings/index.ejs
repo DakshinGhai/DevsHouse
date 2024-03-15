@@ -1,0 +1,98 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <div class="Globalheading heading">
+    <h1 style="color: white !important">Local Brands</h1>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="card__container">
+        <% let a=1 %>
+        <% for(let listing of allListings){ %>
+            <% if(a==1){ %>
+                <article class="card__article">
+                 <a href="/listings/<%=listing._id  %>">
+                    <div class="card__scale-1"></div>
+                <div class="card__scale-2"></div>
+    
+                <div class="card__shape-1">
+                   <div class="card__shape-2"></div>
+                   <div class="card__shape-3">
+                      <img class="brandicon" src="<%= listing.image %>" alt="" height="100%" width="100%">
+                      
+    
+                   </div>
+                </div>
+    
+                <div class="card__data mt-3">
+                   <h2 class="card__title mt-5"  style="color: white;"> <%= listing.Brand %> </h2>
+                   
+                   <p class="card__description">
+                      <%= listing.Breif %>
+                   </p>
+    
+                  
+                </div>
+              </a>
+                </article>
+              
+            <% } else if(a==2){ %>
+                <article class="card__article card__orange">
+                 <a href="/listings/<%=listing._id  %>">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+        
+                    <div class="card__shape-1">
+                       <div class="card__shape-2"></div>
+                       <div class="card__shape-3">
+                          <img class="brandicon" src="<%= listing.image %>" alt="" height="100%" width="100%">
+                          
+        
+                       </div>
+                    </div>
+        
+                    <div class="card__data mt-3">
+                      <h2 class="card__title mt-5 " style="color: white;" > <%= listing.Brand %> </h2>
+                       
+                       <p class="card__description">
+                          <%= listing.Breif %>
+                       </p>
+        
+                       
+                    </div></a>
+                </article>
+            <% } else if(a==3){ %>
+                <article class="card__article  card__green">
+                 <a href="/listings/<%=listing._id  %>">
+                    <div class="card__scale-1"></div>
+                    <div class="card__scale-2"></div>
+        
+                    <div class="card__shape-1">
+                       <div class="card__shape-2"></div>
+                       <div class="card__shape-3">
+                          <img class="brandicon" src="<%= listing.image %>" alt="" height="100%" width="100%">
+                          
+        
+                       </div>
+                    </div>
+        
+                    <div class="card__data mt-3">
+                      <h2 class="card__title mt-5" style="color: white;"> <%= listing.Brand %> </h2>
+                       
+                       <p class="card__description">
+                          <%= listing.Breif %>
+                       </p>
+        
+                       
+                    </div>
+                 </a>
+                </article>
+                <% a=0 %>
+            <% } %>
+            <% a=a+1 %>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
+
+
