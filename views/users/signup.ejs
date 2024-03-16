@@ -38,6 +38,24 @@
           required
         />
       </div>
+      <div class="mb-3">
+        <label for="publickey" class="form-label">public key</label>
+        <input
+          type="text"
+          name="publickey"
+          class="form-control"
+          id="publickey"
+          required
+        />
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="type" class="form-label">Sign-in as</label>
+      <select name="type" id="type" class="form-control">
+        <option value="User">User</option>
+        <option value="Moderator">Moderator</option>
+       
+      </select>
+      </div>
       <button class="btn btn-success">SignUp</button>
     </form>
   </div>

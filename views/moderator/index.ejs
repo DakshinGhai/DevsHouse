@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<div style="display: flex">
+  <div class="moddiv">
+    <h1 class="heading2">Users With Active Requests</h1>
+    <ul class="ul123">
+      <% for(let submission of allSubmission){ %>
+      <a href="/moderator/<%=submission._id  %>" class="names"
+        ><li><%= submission.username %></li></a
+      >
+
+      <% } %>
+    </ul>
+  </div>
+  <div class="verticalicons">
+    <div><img class="user123" src="images/user1.png" alt="" /></div>
+    <div><img class="user123" src="images/user2.png" alt="" /></div>
+    <div><img class="user123" src="images/user3.png" alt="" /></div>
+       
+  </div>
+</div>

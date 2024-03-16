@@ -1,111 +1,122 @@
 const sampleListings = [
-    {
-        Brand: "Bewakoof",
-        Brief:
-          "Plain or Printed? We have it all. Shop your favourite from a variety of trendy T-shirts. One-stop Shopping Destination",
-         image: "https://thoughtoverdesign.com/wp-content/uploads/2022/05/Bewakoof-LogoVariants.png",
-      video:"https://www.youtube.com/watch?v=RGh7aBsYkhE&pp=ygULQmV3YWtvb2YgYWQ%3D",
-        target: "Global",
-        instagram: "https://www.instagram.com/bewakoofofficial/",
-      },
   {
-        Brand: "Powerlook",
-        Brief:
-          "Shop the Latest of Men's Casual Fashion! Stores-Borivali | Andheri | Thane | Bandra | Vasai Shop The #GOAT is here!",
-         image: "https://scontent.fmaa14-1.fna.fbcdn.net/v/t39.30808-6/425683757_687215313587481_3150994944208229143_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PaquaO28HosAX94TXvA&_nc_ht=scontent.fmaa14-1.fna&oh=00_AfDVuO3ZHnNz53cuZsyVT9sekjd3xfIHOUlfX1dNYSOxLA&oe=65F11129",
-      video:"https://www.youtube.com/watch?v=SRIaAdWyY24&pp=ygUMUG93ZXJsb29rIGFk",
-        target: "Mumbai",
-        instagram: "https://www.instagram.com/powerlookofficial/?hl=en",
-      },
+    Brand: "Bewakoof",
+    Brief:
+      "Plain or Printed? We have it all. Shop your favourite from a variety of trendy T-shirts. One-stop Shopping Destination",
+    image:
+      "https://thoughtoverdesign.com/wp-content/uploads/2022/05/after01-1.png",
+    video: "RGh7aBsYkhE",
+    target: "Global",
+    tags: "#Fashion #Style #OOTD #Clothes #Trendy #Fashionista #Outfit #StreetStyle #FashionBlogger #FashionInspiration",
+    location: "New Delhi",
+  },
   {
-        Brand: "Thrive",
-        Brief:
-          "Khane ke liye ‘kuchh bhi’ nahi chalega",
-         image: "https://play-lh.googleusercontent.com/KiePPRXQEjkt7XRbwM_T0tPD5bf3s6FlB6cVp-QYiK33lWSKgxGMpP1TXFIpywCrDVuy=w480-h960-rw",
-      video:"https://www.youtube.com/shorts/1WWvGhUDCa8?feature=share",
-        target: "Mumbai",
-        instagram: "https://www.instagram.com/thrivenow.in/",
-      },
+    Brand: "MamaEarth",
+    Brief:
+      "Mamaearth is one of the most trustworthy brands in India. Mamaearth produces natural Skin, Hair, Body, Baby and Makeup products in India.",
+    image: "https://asset.brandfetch.io/idfoTiWukP/id5TKx0tK3.jpeg",
+    video: "Iogln3lJA0Y",
+    target: "Global",
+    tags: "#skincare #skincareroutine #naturalskincare #organicskincare #skincaretips #skincareproducts",
+    location: "Mumbai",
+  },
   {
-        Brand: "Eatsure",
-        Brief:
-          "Order food online and get delicious meals delivered to your doorstep from EatSure India's most recommended food delivery service.",
-         image: "https://product-assets.faasos.io/eatsure/production/es-brandcolor-logo.svg",
-      video:"https://www.youtube.com/watch?v=xMOG-lzh_Zo&pp=ygULZWF0IHN1cmUgYWQ%3D",
-        target: "Global",
-        instagram: "https://www.instagram.com/eatsurenow/",
-      },
+    Brand: "Snitch",
+    Brief:
+      "Snitch - A Men's fast-fashion clothing brand in India. Encapsulating inspirations from around the globe, SNITCH crafts fantastic clothing",
+    image:
+      "https://images.yourstory.com/cs/images/companies/Snitch-1620061651111.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff",
+    video: "xN0nAJHjuyk",
+    target: "Global",
+    tags: "#Fashion #Style #OOTD #Clothes #Trendy #Fashionista #Outfit #StreetStyle #FashionBlogger #FashionInspiration",
+    location: "Kolkata",
+  },
   {
-        Brand: "SmallCase",
-        Brief:
-          "Invest in ideas with smallcases · A smallcase is a basket of stocks that reflects an idea · Curated by India's top investment managers",
-         image: "https://entrackr.com/storage/2022/02/Smallcase.jpg",
-      video:"https://www.youtube.com/watch?v=K20qcYDP-pc&pp=ygUNc21hbGwgY2FzZSBhZA%3D%3D",
-        target: "Global",
-        instagram: "https://www.instagram.com/smallcasehq/",
-      },
-      {
-  Brand: "Fello.in",
-        Brief:
-          "Fello is a gamified investment and personal finance platform which incentivizes users for saving, growing their money and receive returns higher than their traditional savings account. Users earn the right to participate in the games and lotteries every time they save and invest on the platform which makes the experience of saving fun and intuitive.",
-         image: "https://www.f6s.com/content-resource/profiles/3309896_th1.jpg",
-      video:"https://www.youtube.com/watch?v=69etuM4-8T4&pp=ygUIRmVsbG8gYWQ%3D",
-        target: "Banglore",
-        instagram: "https://www.instagram.com/fellofinance/",
-      },
-      {
-  Brand: "Polygon",
-        Brief:
-          "Polygon Miden. A decentralized rollup that leverages private data storage and local transaction execution. Because privacy scales better.",
-         image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Polygon_blockchain_logo.png",
-      video:"https://www.youtube.com/watch?v=GWUwFDFOipo&pp=ygUVUG9seWdvbiBibG9ja2NoYWluIGFk",
-        target: "Global",
-        instagram: "https://www.instagram.com/polygoncrypto/",
-      },
-      {
-  Brand: "Solana",
-        Brief:
-          "Bring blockchain to the people. Solana supports experiences for power users, new consumers, and everyone in between.",
-         image: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
-      video:"https://youtu.be/CEuKahqOYbs",
-        target: "Global",
-        instagram: "https://www.instagram.com/solana_update/",
-      },
-      {
-  Brand: "Taj Hotels",
-        Brief:
-          "Our best fine-dining restaurants in Mumbai at Taj , will make you travel the world.",
-         image: "https://images.jdmagicbox.com/comp/salem/x1/0427px427.x427.200829022540.u9x1/catalogue/ss-biryani-center-sarkar-kollapatty-salem-restaurants-oka3akogth.jpg",
-      video:"https://www.youtube.com/watch?v=eYxRZ2TiJxY&pp=ygUKVGFqIGhvdGVscw%3D%3D",
-        target: "Mumbai",
-        instagram: "https://www.instagram.com/tajhotels/",
-      },
-      {
-  Brand: "MTR",
-        Brief:
-          "Mavalli Tiffin Rooms, known more popularly as MTR, was established in 1924 and is one of Bangalore's oldest and most well known restaurants.",
-         image: "https://images.squarespace-cdn.com/content/v1/53347a62e4b020b97b38554c/1472581360469-UF079E177TL1VRQ1UQBZ/image-asset.png?format=2500w",
-      video:"https://www.youtube.com/watch?v=lUGITBccwoY&pp=ygUHTVRSIGFkZA%3D%3D",
-        target: "Banglore",
-        instagram: "https://www.instagram.com/mtr_foods/",
-      },
-      {
-  Brand: "FNP",
-        Brief:
-          "FNP India's largest online gift shop for Flowers, Cakes, Plants, Personalised Gifts & more. We promise ✓ midnight & ✓ same-day delivery in India. ",
-         image: "https://exchange4media.gumlet.io/news-photo/120216-main5.jpg?format=webp&w=768&dpr=1.5",
-      video:"https://www.youtube.com/watch?v=lUGITBccwoY&pp=ygUHTVRSIGFkZA%3D%3D",
-        target: "Global",
-        instagram: "https://www.instagram.com/fernsnpetalsindia/",
-      },
-      {
-  Brand: "The Zappy Box",
-        Brief:
-          "Discover a wide range of gift boxes at best price. Customise them for any occasion. Quirky combinations. Corporate orders.",
-         image: "https://lokalstreet.in/wp-content/uploads/2022/01/zapp.png",
-      video:"https://www.youtube.com/shorts/6d8Y1aVKFgc",
-        target: "Global",
-        instagram: "https://www.instagram.com/thezappybox/",
-      },
+    Brand: "boAt",
+    Brief:
+      "India's No.1 Earwear Audio Brand No.1 Truly Wireless Brand in India",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAHa1Pl4WjEp8SbhdskJo509Rwn62QuB_JpCXlgHLdkg38MBu0VnH1fpfYtd9OF6oEGk8&usqp=CAU",
+    video: "zqStIveTwwo",
+    target: "Global",
+    tags: "#musicbrand #musicindustry #musicmarketing #musicpromotion #musicbusiness #musicartist #musicians #musiclovers",
+    location: "New Delhi",
+  },
+  {
+    Brand: "CRED",
+    Brief:
+      "CRED is a members-only club that rewards individuals for their timely credit card bill payments by providing them with exclusive offers and access to premium experiences.",
+    image:
+      "https://pbs.twimg.com/profile_images/1168783629847187456/TcrCUlS__400x400.jpg",
+    video: "ZMpEeE0v2y8",
+    target: "Global",
+    tags: "#finance #financialfreedom #personalfinance #financialplanning #mortgage #financialliteracy",
+    location: "New Delhi",
+  },
+  {
+    Brand: "Swiggy",
+    Brief:
+      "Order Food Online From Restaurants Serving In Chennai From Swiggy & Get 50% Off On First Order. Get Food Delivered Within 30 Mins.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpPuR71_lvbKtIxdJyrhvAyNp2KjLxlX9oYOzr7Ak2bnHvwIlVDgWVAbzWIpCfU7vNVKE&usqp=CAU",
+    video: "x7KSBEBRGA0",
+    target: "Global",
+    tags: "#foodie #foodlover #restaurant #onlinefood",
+    location: "Banglore",
+  },
+  {
+    Brand: "Ambrocias",
+    Brief:
+      "Order Food Online from Ambrocias Restaurant Tambaram Chennai. Enjoy Delicious Food Delivered To Your Doorstep.",
+    image:
+      "data:image/jpeg;base64,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",
+    video: "6TGjIb-Zp1g",
+    target: "Chennai",
+    tags: "#foodie #foodlover #restaurant #foodstagram #foodgasm",
+    location: "Kelambakkam, Chennai",
+  },
+  {
+    Brand: "Meghna Biryani",
+    Brief:
+      "Meghana, meaning rain, is a restaurant that was started in the year 2006, at Koramangala, Bengaluru with the intention of serving authentic Andhra style food, using quality ingredients and the pure passion and love for what we do.",
+    image:
+      "data:image/jpeg;base64,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",
+    video: "RGh7aBsYkhE",
+    target: "Guindy",
+    tags: "#biryani #foodie #indianfood #foodporn #chickenbiryani #foodphotography #foodlover #foodstagram #foodgasm #foodblogger",
+    location: "Chennai",
+  },
+  {
+    Brand: "Krispy Kreme",
+    Brief:
+      "Krispy Kreme India, delicious doughnuts and freshly brewed coffee. Stop by or order online Original Glazed or assorted doughnuts paired with a hot beverage.",
+    image:
+      "https://dtbtob4osa700.cloudfront.net/DineImages/14072020154445202_dprim.png",
+    video: "4vCV7GNIo_c",
+    target: "Chennai",
+    tags: "#donuts #orignalglased #coffee #choclatedonut",
+    location: "Chennai",
+  },
+  {
+    Brand: "Meenaakshi Medical",
+    Brief: "Compounding and Dispensing of Medications",
+    image:
+      "https://content3.jdmagicbox.com/comp/chengalpattu/e7/9999pxx44.xx44.160118105309.n4e7/catalogue/sri-meenakshi-medicals-guduvanchery-chengalpattu-chemists-t14ehfgw9y.jpg",
+    video: "ZjkMUEdng3s",
+    target: "Kellambakkam, Chennai",
+    tags: "#pharmacy #pharmacist #healthcare #medicine #medical #pharma #pharmalife #health #wellness #pharmacylife",
+    location: "Kellambakkam, Chennai",
+  },
+  {
+    Brand: "Krishna Grocery",
+    Brief:
+      "A place where people can conveniently find everything they need in one location without having to visit multiple stores",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkz1SGNHG1cLlZnXDl6PEVLTynNpc54lwmgg&usqp=CAU",
+    video: "1EGaPz7FooI",
+    target: "T Nagar",
+    tags: "#grocery #vegetables #fuits #flour #nutrition",
+    location: "Chennai",
+  },
 ];
 module.exports = { data: sampleListings };

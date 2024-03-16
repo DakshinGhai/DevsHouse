@@ -1,0 +1,32 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<body background="/images/adbg.png">
+    <h1 class="heading4">User Details</h1>
+    <div class="bigcontainer">
+        <div class="leftcontainer">
+            <div class="leftup">
+                Username:  <%= submission.username %> 
+
+            </div>
+            <div class="leftup">
+                Instagram ID: <%= submission.instaid %> 
+            </div>
+            <div class="leftup">Public Key:<%= submission.publickey %> </div>
+            <form method="post" action="/moderator/<%=submission._id%>?_method=DELETE">
+                <button class="btn678">Disapprove</button>
+              </form>
+           
+            <form action="https://devshousewallet-kzdxzwevd-dhairya703s-projects.vercel.app/">
+                <button class="btn456">Approve</button>
+            </form>
+           
+            
+        
+        </div>
+        <div class="right container">
+            <img class="phone1" src="/images/phone.png" alt="">
+            <img class="phoneinside" src="<%= submission.image %>" alt="">
+            </div>
+    </div>
+</body>
+</html>

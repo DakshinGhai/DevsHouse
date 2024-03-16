@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body background="/images/mArgo.png">
+  <div class="row mt-3 blur">
+    <h1 class="col-6 offset-1 heading1">Enter Details</h1>
+    <div class="col-6 offset-1 form">
+      <form
+        action="/submission"
+        method="post"
+        class="needs-validation"
+        novalidate
+      >
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            id="username"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="instaid" class="form-label">instaid</label>
+          <input
+            type="text"
+            name="instaid"
+            class="form-control"
+            id="instaid"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="publickey" class="form-label">public-key</label>
+          <input
+            type="text"
+            name="publickey"
+            class="form-control"
+            id="publickey"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">image url</label>
+          <input
+            type="text"
+            name="image"
+            class="form-control"
+            id="image"
+            required
+          />
+        </div>
+        <button class="btn btn-success">Submit</button>
+      </form>
+        
+    </div>
+  </div>
+</body>

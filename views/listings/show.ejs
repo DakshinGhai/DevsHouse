@@ -11,7 +11,7 @@
       </div>
       <div class="lowerleft">
         <div class="desc">
-          <p class="discription"><%= listing.brief %></p>
+          <p class="discription"><%= listing.Brief %></p>
         </div>
       </div>
     </div>
@@ -34,10 +34,7 @@
       <img class="hashtagpng" src="/images/hashtags.png" alt="" />
     </div>
     <div class="bottomright">
-      <p class="hashtags">
-        HashTags: #DiscountDeals #ShopaholicProblems #OnlineShopping
-        #FashionForward #WardrobeGoals #ImpulseBuy #FashionObsessed
-      </p>
+      <p class="hashtags">HashTags: <%= listing.tags %></p>
     </div>
   </div>
   <div class="price">
@@ -63,9 +60,11 @@
       </form>
     </div>
     <div>
-      <button class="button3">
-        <img class="screenshot" src="/images/screenshot.png" alt="" />
-      </button>
+      <form action="/submission">
+        <button class="button3">
+          <img class="screenshot" src="/images/screenshot.png" alt="" />
+        </button>
+      </form>
     </div>
   </div>
 </body>

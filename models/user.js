@@ -7,6 +7,18 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  type: {
+    type: String,
+    required: true,
+  },
+  publickey: {
+    type: String,
+    required: true,
+  },
+  balance: {
+    type: String,
+    default: "0.00",
+  },
 });
 
 userSchema.plugin(passportLocalMongoose);

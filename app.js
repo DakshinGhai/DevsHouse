@@ -5,12 +5,14 @@ const Listing = require("./models/listing.js");
 const path = require("path");
 const listingRouter = require("./routes/listing.js");
 const userRouter = require("./routes/user.js");
+const moderatorRouter = require("./routes/moderator.js");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const Submission = require("./models/submission.js");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 
@@ -66,6 +68,7 @@ app.get("/", (req, res) => {
 
 app.use("/listings", listingRouter);
 app.use("/", userRouter);
+app.use("/moderator", moderatorRouter);
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found"));
