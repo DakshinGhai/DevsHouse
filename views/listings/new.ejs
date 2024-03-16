@@ -1,9 +1,13 @@
 <% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <div class="newbg">
+    <img class="newbgimg" src="/images/newbg.png" alt="" />
+    <img class="newbgimg1" src="/images/newbg.png" alt="" />
+  </div>
 
-
-  <div class="row mt-5">
+  <div class="row mt-5 bigdiv">
     <div class="col-8 offset-2">
-      <h3>Add your brand</h3>
+      <h3 class="heading heading2 offset-1 form-label">Add Your Brand</h3>
       <form
         action="/listings"
         method="post"
@@ -15,37 +19,38 @@
           <input
             type="text"
             name="listing[Brand]"
-            placeholder="Add a catchy title"
+            placeholder="Enter your Brand Name..."
             class="form-control"
             required
           />
           <div class="valid-feedback">Title looks good!</div>
         </div>
         <div class="mb-3">
-          <label for="Brief" class="form-label">Brand brief</label>
+          <label for="Brief" class="form-label">Tell us about your Brand</label>
           <textarea
             name="listing[Brief]"
             class="form-control"
+            placeholder="A short description of your Brand"
             required
           ></textarea>
           <div class="invalid-feedback">Please enter a short brief</div>
         </div>
 
         <div class="mb-3">
-          <label for="image" class="form-label">Image Link</label>
+          <label for="image" class="form-label">Brand Logo</label>
           <input
             type="text"
             name="listing[image]"
-            placeholder="enter image URL/Link"
+            placeholder="URL/Link of Brand Logo"
             class="form-control"
           />
         </div>
         <div class="mb-3">
-          <label for="video" class="form-label">Video</label>
+          <label for="video" class="form-label">Video Advertisment</label>
           <input
             type="text"
             name="listing[video]"
-            placeholder="enter image URL/Link"
+            placeholder="URL/Link of your Advertisment"
             class="form-control"
           />
         </div>
@@ -56,27 +61,36 @@
             <input
               type="text"
               name="listing[target]"
-              placeholder="Global"
+              placeholder="Global or Local"
               class="form-control"
               required
             />
-            <div class="invalid-feedback">Enter valid target type for Customers</div>
+            <div class="invalid-feedback">
+              Enter valid target type for Customers
+            </div>
           </div>
           <div class="mb-3 col-md-8">
             <label for="location" class="form-label">Location</label>
             <input
               type="text"
               name="listing[location]"
-              placeholder="Jaipur,Rajasthan"
+              placeholder="Where your brand is based?"
               class="form-control"
               required
             />
             <div class="invalid-feedback">Location should be valid</div>
           </div>
-          
+          <div class="mb-3">
+            <label for="tags" class="form-label">Hashtags</label>
+            <textarea
+              name="listing[tags]"
+              class="form-control"
+              placeholder="Hashtags"
+              required
+            ></textarea>
+            <div class="invalid-feedback">Please enter hashtags</div>
+          </div>
         </div>
-
-        
 
         <br /><br />
         <button class="btn btn-dark add-btn">Add</button> <br />

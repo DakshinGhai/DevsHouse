@@ -5,6 +5,7 @@ const Listing = require("./models/listing.js");
 const path = require("path");
 const listingRouter = require("./routes/listing.js");
 const userRouter = require("./routes/user.js");
+const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
@@ -44,10 +45,6 @@ const sessionOptions = {
   },
 };
 
-app.get("/", (req, res) => {
-  res.render("listings/home.ejs");
-});
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -62,6 +59,9 @@ app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
   next();
+});
+app.get("/", (req, res) => {
+  res.render("listings/home.ejs");
 });
 
 app.use("/listings", listingRouter);

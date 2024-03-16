@@ -1,63 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Ad</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script/script.js"></script>
-  </head>
-  <body background="/images/adbg.png">
-    <div class="div1">
-      <img class="brandimage" src="<%=listing.image%>" alt="image" />
+<% layout("/layouts/boilerplate.ejs") %>
+<body background="/images/adbg.png">
+  <div class="bigdiv">
+    <div class="leftdiv">
+      <div class="upperleft">
+        <img class="brandimage" src="<%= listing.image %>" alt="image" />
+        <div class="div456">
+          <div class="brandname"><%= listing.Brand %></div>
+          <div class="marketingtype"><%= listing.target %></div>
+        </div>
+      </div>
+      <div class="lowerleft">
+        <div class="desc">
+          <p class="discription"><%= listing.brief %></p>
+        </div>
+      </div>
     </div>
-    <div class="div1">
-      <h1 class="brandname"><%=listing.Brand%></h1>
-      <p class="marketingtype"><%=listing.target%></p>
-    </div>
-    <div>
+    <div class="rightdiv">
+      <img class="phone" src="/images/phone.png" alt="" />
       <iframe
         class="ad"
-        src="<%=listing.video%>"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/<%= listing.video %>"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
-        height="300px"
       ></iframe>
     </div>
+  </div>
+  <div class="bottom">
+    <div class="bottomleft">
+      <img class="hashtagpng" src="/images/hashtags.png" alt="" />
+    </div>
+    <div class="bottomright">
+      <p class="hashtags">
+        HashTags: #DiscountDeals #ShopaholicProblems #OnlineShopping
+        #FashionForward #WardrobeGoals #ImpulseBuy #FashionObsessed
+      </p>
+    </div>
+  </div>
+  <div class="price">
+    <div class="pricediv">
+      <div class="vertprice">
+        <h1 class="headingprice">Price Per View:</h1>
+        <h1 class="headingprice1">₹20</h1>
+      </div>
+    </div>
+    <img class="eyepng" src="/images/eye.png" alt="" />
+  </div>
+  <div class="buttons">
     <div>
-      <p class="discription"><%=listing.Brief%></p>
+      <button class="button1">
+        <img class="downloadimg" src="/images/Than.png" alt="" />
+      </button>
     </div>
-    <br />
-    <br />
-    <div class="buttonsdiv">
-      <button download>Download</button>
-      <form method="get" action="https://www.facebook.com/stories/create">
-        <button>Add to story</button>
-      </form>
-      <form method="get" action="/listings/upload">
-        <button>Submit</button>
+    <div>
+      <form action="https://www.facebook.com/stories/create">
+        <button class="button2">
+          <img class="socialmedia" src="/images/socialmedia.png" alt="" />
+        </button>
       </form>
     </div>
-  </body>
-</html>
+    <div>
+      <button class="button3">
+        <img class="screenshot" src="/images/screenshot.png" alt="" />
+      </button>
+    </div>
+  </div>
+</body>
