@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Listing = require("../models/listing.js");
+const youtubeUtils = require("../public/js/youtubeUtils.js");
 
 //index route
 router.get("/", async (req, res) => {
@@ -9,7 +10,12 @@ router.get("/", async (req, res) => {
 });
 //new route show route ke upar aaega bcz vrna vo usko id samjh raha and error aa raha
 //new Route
+// New Route
 router.get("/new", async (req, res) => {
+  if (!req.isAuthenticated()) {
+    req.flash("error", "You must be logged in to add your brand!");
+    return res.redirect("/login");
+  }
   res.render("listings/new.ejs");
 });
 
@@ -22,6 +28,9 @@ router.get("/:id", async (req, res) => {
 
 //create Route
 router.post("/", async (req, res) => {
+  req.body.listing.video = await youtubeUtils.extractVideoId(
+    req.body.listing.video
+  );
   const newListing = new Listing(req.body.listing);
   await newListing.save();
   res.redirect("/listings");
