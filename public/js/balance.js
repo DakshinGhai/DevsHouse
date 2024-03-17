@@ -1,20 +1,30 @@
 const { Connection, LAMPORTS_PER_SOL, PublicKey } = require("@solana/web3.js");
 
-const suppliedPublicKey = "GXXKDtVZ9acsoAtEeBTvc2WcnUi4hPhjNWPUBExrwRCc";
-if (!suppliedPublicKey) {
-  throw new Error("Provide a public key to check the balance of!");
-}
+// Define a function to get balance by public key
+async function getBalanceByPublicKey(suppliedPublicKey) {
+  if (!suppliedPublicKey) {
+    throw new Error("Provide a public key to check the balance of!");
+  }
 
-const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+  const connection = new Connection(
+    "https://api.devnet.solana.com",
+    "confirmed"
+  );
 
-const publicKey = new PublicKey(suppliedPublicKey);
+  const publicKey = new PublicKey(suppliedPublicKey);
 
-connection.getBalance(publicKey).then((balanceInLamports) => {
+  const balanceInLamports = await connection.getBalance(publicKey);
+
   const balanceInSOL = balanceInLamports / LAMPORTS_PER_SOL;
+
   console.log(
     `✅ Finished! The balance for the wallet at address ${publicKey} is ${balanceInSOL}!`
   );
-  module.exports = {
-    balanceInSOL,
-  };
-});
+
+  return balanceInSOL;
+}
+
+// Export the function
+module.exports = {
+  getBalanceByPublicKey,
+};

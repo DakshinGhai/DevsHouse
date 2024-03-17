@@ -12,6 +12,7 @@
                 Instagram ID: <%= submission.instaid %> 
             </div>
             <div class="leftup">Public Key:<%= submission.publickey %> </div>
+            <div class="div1111">
             <form method="post" action="/moderator/<%=submission._id%>?_method=DELETE">
                 <button class="btn678">Disapprove</button>
               </form>
@@ -19,7 +20,7 @@
             <form action="https://devshousewallet-kzdxzwevd-dhairya703s-projects.vercel.app/">
                 <button class="btn456">Approve</button>
             </form>
-           
+        </div>
             
         
         </div>

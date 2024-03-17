@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../models/user.js");
 const Submission = require("../models/submission.js");
 const passport = require("passport");
+const balanceInSOL = require("../public/js/balance.js");
 
 router.get("/signup", (req, res) => {
   res.render("users/signup.ejs");
@@ -56,14 +57,24 @@ router.get("/aboutus", (req, res) => {
   res.render("users/aboutus.ejs");
 });
 
-router.get("/wallet", (req, res) => {
+router.get("/wallet", async (req, res) => {
   if (!req.isAuthenticated()) {
     req.flash("error", "You must be logged in to check your balance");
     return res.redirect("/login");
   }
-  const balance = balanceInSOL;
-  console.log(balance);
-  res.render("users/wallet.ejs", balance);
+
+  try {
+    console.log(req.user.publickey);
+    const balance = await balanceInSOL.getBalanceByPublicKey(
+      req.user.publickey
+    );
+
+    res.render("users/wallet.ejs", { balance });
+  } catch (error) {
+    console.error("Error fetching balance:", error);
+    req.flash("error", "Failed to fetch balance. Please try again later.");
+    return res.redirect("/listings");
+  }
 });
 router.post("/submission", async (req, res) => {
   const newListing = new Submission(req.body);
