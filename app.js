@@ -16,7 +16,7 @@ const Submission = require("./models/submission.js");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/MarGo";
+const MONGO_URL = "mongodb+srv://dakshinghai14:test123@devshouse.vvrjzpy.mongodb.net/?retryWrites=true&w=majority&appName=devshouse";
 
 main()
   .then(() => {
